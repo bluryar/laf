@@ -5,6 +5,7 @@
 apiServerHost: ""
 databaseUrl: ""
 apiServerUrl: ""
+secretName: ""
 siteName: "laf"
 # init default region conf
 default_region:

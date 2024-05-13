@@ -23,3 +23,9 @@ spec:
               number: 3000
         path: /v1/
         pathType: Prefix
+{{- if ne .Values.secretName ""}}
+  tls:
+  - hosts:
+    - {{ .Values.domain }}
+    secretName: {{ .Values.secretName }}
+{{- end }}

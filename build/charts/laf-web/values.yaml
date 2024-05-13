@@ -4,6 +4,7 @@
 
 domain: ""
 replicaCount: 1
+secretName: ""
 
 image:
   repository: docker.io/lafyun/laf-web

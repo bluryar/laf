@@ -3,6 +3,7 @@
 
 consoleHost: ""
 domain: ""
+secretName: ""
 
 nameOverride: ""
 

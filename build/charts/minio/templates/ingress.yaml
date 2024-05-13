@@ -17,3 +17,9 @@ spec:
               number: 9000
         path: /
         pathType: Prefix
+{{- if ne .Values.secretName ""}}
+  tls:
+  - hosts:
+    - {{ .Values.domain }}
+    secretName: {{ .Values.secretName }}
+{{- end }}

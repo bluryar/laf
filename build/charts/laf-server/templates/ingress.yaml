@@ -16,3 +16,9 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
+{{- if ne .Values.secretName ""}}
+  tls:
+  - hosts:
+    - {{ .Values.apiServerHost }}
+    secretName: {{ .Values.secretName }}
+{{- end }}

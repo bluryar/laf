@@ -18,6 +18,30 @@
 
 ---
 
+- deps: sealos
+
+## build
+
+```bash
+sealos build -t <Your Container Name>:<Version> .
+```
+
+## deploy
+
+```bash
+sealos run \
+--env DOMAIN=<DOMAIN> \
+--env ENABLE_TLS=true \
+--env TLS_CERT_PATH=/etc/letsencrypt/live/<DOMAIN>/fullchain.pem \
+--env TLS_KEY_PATH=/etc/letsencrypt/live/<DOMAIN>/privkey.pem \
+--env DB_PV_SIZE=160Gi \
+--env OSS_PV_SIZE=160Gi \
+--env EXTERNAL_HTTP_SCHEMA=https \
+localhost/<Your Container Name>:<Version> 
+```
+
+---
+
 > 中文 | [English](README_en.md)
 ## 👀 `laf` 是什么
 
